@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { HERO_STATS } from "@/lib/constants";
 import { Button } from "@/components/ui/Button";
+import { FictionBadge } from "@/components/ui/FictionBadge";
 
 export function Hero() {
   return (
@@ -75,14 +76,17 @@ export function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.7 }}
-          className="mt-16 grid grid-cols-3 gap-6 max-w-lg"
+          className="mt-16 max-w-lg"
         >
-          {HERO_STATS.map((stat) => (
-            <div key={stat.label} className="text-center sm:text-left">
-              <p className="font-display text-2xl sm:text-3xl font-bold text-accent">{stat.value}</p>
-              <p className="text-sm text-muted mt-1">{stat.label}</p>
-            </div>
-          ))}
+          <div className="grid grid-cols-3 gap-6">
+            {HERO_STATS.map((stat) => (
+              <div key={stat.label} className="text-center sm:text-left">
+                <p className="font-display text-2xl sm:text-3xl font-bold text-accent">{stat.value}</p>
+                <p className="text-sm text-muted mt-1">{stat.label}</p>
+              </div>
+            ))}
+          </div>
+          <FictionBadge label="Fiktive Beispielwerte" className="mt-4" />
         </motion.div>
       </div>
     </section>

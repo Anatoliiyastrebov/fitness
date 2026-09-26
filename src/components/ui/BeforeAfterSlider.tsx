@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useState, useRef, useCallback } from "react";
+import { FictionBadge } from "@/components/ui/FictionBadge";
 
 interface BeforeAfterSliderProps {
   before: string;
@@ -66,7 +67,7 @@ export function BeforeAfterSlider({
         <div className="absolute inset-0 pointer-events-none">
           <Image
             src={after}
-            alt={`Nachher: ${labelAfter} – ${name}`}
+            alt={`Symbolbild (fiktiv), Nachher: ${labelAfter}`}
             fill
             priority={priority}
             sizes={IMAGE_SIZES}
@@ -81,7 +82,7 @@ export function BeforeAfterSlider({
         >
           <Image
             src={before}
-            alt={`Vorher: ${labelBefore} – ${name}`}
+            alt={`Symbolbild (fiktiv), Vorher: ${labelBefore}`}
             fill
             priority={priority}
             sizes={IMAGE_SIZES}
@@ -112,6 +113,11 @@ export function BeforeAfterSlider({
         <span className="absolute top-3 right-3 z-[4] max-w-[45%] rounded-md bg-accent px-2.5 py-1.5 text-[10px] sm:text-xs font-semibold text-black pointer-events-none leading-tight text-right">
           Nachher
         </span>
+
+        <FictionBadge
+          label="Symbolbild · fiktiv"
+          className="absolute bottom-3 left-1/2 z-[4] -translate-x-1/2 bg-black/80 text-amber-300 pointer-events-none"
+        />
 
         {/* Interaktions-Layer: ziehen über gesamte Fläche + Griff */}
         <div
@@ -149,7 +155,9 @@ export function BeforeAfterSlider({
       </div>
 
       <div className="mt-4 space-y-1">
-        <p className="font-semibold">{name}</p>
+        <p className="font-semibold">
+          {name} <span className="text-xs font-normal text-muted">(fiktive Person)</span>
+        </p>
         <p className="text-sm text-accent font-medium">{duration}</p>
         <p className="text-xs text-muted">
           <span className="text-foreground/70">Vorher:</span> {labelBefore}

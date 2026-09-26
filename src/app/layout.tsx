@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     siteName: SITE.name,
     title: `${SITE.name} – Personal Training & Coaching`,
     description:
-      "Individuelles 1:1 Coaching für nachhaltige Transformation. Über 500 zufriedene Kunden.",
+      "Individuelles 1:1 Coaching für nachhaltige Transformation.",
   },
   robots: { index: true, follow: true },
 };

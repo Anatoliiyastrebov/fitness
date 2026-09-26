@@ -95,8 +95,6 @@ export const TESTIMONIALS = [
     id: 1,
     name: "Sarah Klein",
     role: "Marketing Managerin",
-    image:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop",
     rating: 5,
     text: "In nur 4 Monaten habe ich 12 kg abgenommen und fühle mich stärker als je zuvor. Markus motiviert ohne Druck – absolut empfehlenswert!",
   },
@@ -104,8 +102,6 @@ export const TESTIMONIALS = [
     id: 2,
     name: "Thomas Berger",
     role: "Unternehmer",
-    image:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop",
     rating: 5,
     text: "Das VIP Coaching hat meinen Alltag komplett verändert. Endlich ein Training, das zu meinem vollen Terminkalender passt.",
   },
@@ -113,8 +109,6 @@ export const TESTIMONIALS = [
     id: 3,
     name: "Lisa Hoffmann",
     role: "Ärztin",
-    image:
-      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop",
     rating: 5,
     text: "Professionell, strukturiert und wissenschaftlich fundiert. Die Ernährungsberatung war der Game-Changer für mich.",
   },
@@ -122,8 +116,6 @@ export const TESTIMONIALS = [
     id: 4,
     name: "Daniel Richter",
     role: "Software-Entwickler",
-    image:
-      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&fit=crop",
     rating: 5,
     text: "Online Coaching funktioniert besser als erwartet. Klare Pläne, schnelles Feedback – Ergebnisse nach 8 Wochen sichtbar.",
   },

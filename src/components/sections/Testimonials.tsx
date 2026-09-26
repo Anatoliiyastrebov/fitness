@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import { useCallback } from "react";
@@ -9,6 +8,7 @@ import { TESTIMONIALS } from "@/lib/constants";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { StarRating } from "@/components/ui/StarRating";
+import { FictionBadge } from "@/components/ui/FictionBadge";
 
 export function Testimonials() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: "start" }, [
@@ -23,9 +23,9 @@ export function Testimonials() {
       <div className="container-narrow">
         <ScrollReveal>
           <SectionHeading
-            eyebrow="Kundenbewertungen"
+            eyebrow="Beispiel-Bewertungen · fiktiv"
             title="Was meine Kunden sagen"
-            description="Echte Ergebnisse von echten Menschen – über 500 zufriedene Klienten vertrauen VITALPEAK."
+            description="Fiktive Beispieltexte zur Demonstration dieser Website – keine echten Kundenbewertungen. Namen und Personen sind frei erfunden."
           />
         </ScrollReveal>
 
@@ -39,16 +39,21 @@ export function Testimonials() {
                     className="flex-[0_0_100%] min-w-0 sm:flex-[0_0_calc(50%-12px)] lg:flex-[0_0_calc(33.333%-16px)]"
                   >
                     <div className="h-full rounded-3xl border border-border bg-card p-6 flex flex-col">
-                      <StarRating rating={t.rating} />
+                      <div className="flex items-center justify-between gap-3">
+                        <StarRating rating={t.rating} />
+                        <FictionBadge />
+                      </div>
                       <p className="mt-4 text-muted leading-relaxed flex-1">&ldquo;{t.text}&rdquo;</p>
                       <div className="mt-6 flex items-center gap-3">
-                        <Image
-                          src={t.image}
-                          alt={t.name}
-                          width={48}
-                          height={48}
-                          className="rounded-full object-cover"
-                        />
+                        <span
+                          aria-hidden
+                          className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-accent/20 font-semibold text-accent"
+                        >
+                          {t.name
+                            .split(" ")
+                            .map((part) => part[0])
+                            .join("")}
+                        </span>
                         <div>
                           <p className="font-semibold">{t.name}</p>
                           <p className="text-sm text-muted">{t.role}</p>

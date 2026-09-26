@@ -11,9 +11,9 @@ export function BeforeAfter() {
       <div className="container-narrow">
         <ScrollReveal>
           <SectionHeading
-            eyebrow="Vorher / Nachher"
-            title="Echte Transformationen"
-            description="Drei Kunden, drei Wege: vom Alltag zum sportlichen Körpergefühl. Ziehe den Regler, um Vorher und Nachher zu vergleichen."
+            eyebrow="Vorher / Nachher · fiktiv"
+            title="Beispiel-Transformationen"
+            description="Fiktive Beispiele zur Demonstration: Symbolbilder aus Stockfotos, Vorher und Nachher zeigen unterschiedliche Personen – keine echten Kunden und keine echten Ergebnisse. Ziehe den Regler, um den Vergleich auszuprobieren."
           />
         </ScrollReveal>
 

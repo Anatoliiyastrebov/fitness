@@ -5,6 +5,7 @@ import { Check } from "lucide-react";
 import { CERTIFICATES, SPECIALIZATIONS } from "@/lib/constants";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { FictionBadge } from "@/components/ui/FictionBadge";
 
 export function About() {
   return (
@@ -23,11 +24,15 @@ export function About() {
             <div className="relative aspect-[4/5] rounded-3xl overflow-hidden">
               <Image
                 src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800&h=1000&fit=crop"
-                alt="Markus Weber Personal Trainer"
+                alt="Symbolbild eines Personal Trainers (Stockfoto)"
                 fill
                 className="object-cover"
               />
               <div className="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-3xl" />
+              <FictionBadge
+                label="Symbolbild · fiktive Person"
+                className="absolute bottom-4 left-4 bg-black/80 text-amber-300"
+              />
             </div>
           </ScrollReveal>
 
@@ -55,7 +60,9 @@ export function About() {
                 ))}
               </ul>
 
-              <h3 className="mt-8 font-semibold text-lg">Zertifikate</h3>
+              <h3 className="mt-8 flex items-center gap-3 font-semibold text-lg">
+                Zertifikate <FictionBadge label="Fiktive Beispiele" />
+              </h3>
               <ul className="mt-4 space-y-2">
                 {CERTIFICATES.map((cert) => (
                   <li key={cert} className="flex items-center gap-2 text-sm text-muted">
