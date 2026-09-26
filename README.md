@@ -20,11 +20,14 @@ npm run dev
 
 Öffne [http://localhost:3000](http://localhost:3000).
 
-## Production Build
+## Production Build & Deployment (Cloudflare)
+
+Die Seite wird als statischer Export (`out/`) gebaut und über Cloudflare Workers (Static Assets) ausgeliefert.
 
 ```bash
-npm run build
-npm start
+npm run build     # statischer Export nach out/
+npm run preview   # lokal mit Cloudflare-Runtime testen (wrangler dev)
+npm run deploy    # Build + Deployment via wrangler
 ```
 
 ## Projektstruktur
